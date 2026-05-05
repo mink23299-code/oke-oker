@@ -1,0 +1,369 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Order</title>
+     <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #1f2937;
+      color: #fff;
+    }
+
+    /* NAVBAR */
+   .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+      }
+
+      .navbar h2 {
+        font-weight: 600;
+      }
+
+      .nav-links a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #ccc;
+      }
+     
+      .nav-links a:hover {
+        color: #ff6a00;
+      }
+
+    .order-title {
+      padding: 80px 60px;
+      text-align: center;
+      background: linear-gradient(135deg, #0b0f19, #1a2238);
+    }
+    .order-title h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .order-title span {
+      color: #ff6a00;
+    }
+    /*order*/
+
+    .order {
+      padding: 60px;
+      /* background:#f5f5f5; */
+    }
+
+    .order-container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .order h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+    .form-row select{
+       width:100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+  
+
+    .order input,
+    .order textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+    
+   
+    .order textarea {
+      height: 120px;
+    }
+
+  
+    /*Footer*/
+    .footer {
+      background: linear-gradient(135deg, #0b0f19, #1a2238);
+      color: white;
+      padding: 40px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer h2 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .footer h3 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .footer p {
+      color: #fff;
+      margin-top: 5px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-links ul li a:hover {
+      color: #ff6b00;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icons a:hover {
+      color: #ff6b00;
+    }
+
+    .footer-col h4 {
+      color: var(--gold);
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* for confirm-box----- */
+    .order-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay:target {
+    display: flex;
+}
+
+.modal-content {
+    background: black;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.3s;
+}
+
+.close-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 25px;
+    background: #ff6a00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+  </style>
+  <body>
+    <!-- NAVBAR -->
+  <div class="navbar">
+      <h2>Hamas Sneaker Collections</h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="brand.html">New Arrival</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <div class="order-title">
+      <h2>Place Your <span>Pre-Order</span></h2>
+    </div>
+    <section class="order">
+      <div class="order-container">
+        <form action="#confirm-box">
+          <div class="form-row">
+            <input type="text" placeholder="Full Name" required />
+            <input type="tel" placeholder="Phone Number" required />
+          </div>
+
+          <input type="email" placeholder="Email Address" required />
+
+          <div class="form-row">
+         <select id="payment" required>
+            <option value="">Select Sneaker Name</option>   
+            <option value="">Nike travist scoot</option>
+            <option value="">Nike Air Force 1</option>
+            <option value="">Nike Jordan 1</option>
+            <option value="">Nike Jordan4</option>
+            <option value="">Nike X Powerpuff Girls</option>
+            <option value="">Lobster Series</option>
+            </select>
+
+            <input type="text" placeholder="Size (e.g. 42)" />
+          </div>
+
+          <div class="form-row">
+            <input type="text" placeholder="Color" />
+            <input type="number" placeholder="Quantity" />
+          </div>
+
+          <div class="form-row">
+
+            <select id="payment" required>
+            <option value="">Payment Method</option>   
+            <option value="">KBZpay</option>
+            <option value="">Wave Pay</option>
+            <option value="">AYA Pay</option>
+            <option value="">CB Pay</option>
+            <option value="">Mobile Banking</option>
+            <option value="">Cash on Delivery</option>
+            </select>
+          </div>
+
+          <textarea placeholder="Delivery Address"></textarea>
+           <button type="submit" class="order-btn">Order Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- /*footer*/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2>Sneaker Shop</h2>
+          <p>Fresh sneakers. Premium comfort. Everyday style.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="brand.html">New Arrival</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Dawei, Myanmar</p>
+          <p><i class="fas fa-phone"></i> +95 9 123 456 789</p>
+          <p><i class="fas fa-envelope"></i> info@sneakershop.com</p>
+          <p><i class="fas fa-envelope"></i> www.sneakershop.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sneaker Shop| Designed by Okekar Min.</p>
+      </div>
+    </footer>
+
+   <div id="confirm-box" class="modal-overlay">
+    <div class="modal-content">
+        <h3>Pre-order Confirmed!</h3>
+        <p>2 or 3 waiting period.<p>
+        <a href="#" class="close-btn">OK</a>
+    </div>
+</div>
+  </body>
+</html>

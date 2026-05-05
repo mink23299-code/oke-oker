@@ -1,0 +1,542 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Okka Sneaker Collections</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #1f2937;
+        color: #fff;
+      }
+      /* NAVBAR */
+     .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        position: sticky;
+        top:0;
+        z-index: 9999;
+      }
+
+      .navbar h2 {
+        font-weight: 600;
+      }
+
+      .nav-links a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .nav-links a:hover {
+        color: #ff6a00;
+      }
+
+      /* HERO */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px;
+        background: linear-gradient(135deg, #0b0f19, #1a2238);
+        width: 100%;
+        height: 400px;
+    
+      }
+
+     
+      .hero-text h1 {
+        font-size: 50px;
+      }
+
+      .hero-text span {
+        color: #ff6a00;
+      }
+
+      .hero-text p {
+        margin: 20px 0;
+        color: #aaa;
+      }
+
+      .home-img img {
+      width: auto;
+      height: auto;
+      max-width: 90%;
+      max-height: 550px;
+      object-fit: contain;
+      margin-right: 200px;
+      filter: drop-shadow(0 20px 30px rgba(225, 47, 7, 0.2));
+     
+    
+      } 
+
+
+      .btn {
+        padding: 12px 25px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-right: 10px;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease,
+          color 0.18s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      /* .btn-primary removed */
+
+      .btn-outline {
+        border: 1px solid #ff6a00;
+        background: transparent;
+        color: #ff6a00;
+      }
+
+      /* Hover styles for hero buttons */
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+      }
+
+      /* .btn-primary hover removed */
+
+      .btn-outline:hover {
+        background: #ff6a00;
+        color: #fff;
+        border-color: #ff6a00;
+      }
+
+      /* Professional button: hover and click (active) color */
+      .btn-professional {
+        background: linear-gradient(90deg, #172554, #0ea5e9);
+        color: #fff;
+        box-shadow: 0 6px 18px rgba(14, 165, 233, 0.12);
+      }
+
+      .btn-professional:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px rgba(14, 165, 233, 0.18);
+      }
+
+      .btn-professional.active,
+      .btn-professional:active {
+        background: linear-gradient(90deg, #0ea5e9, #0284c7);
+        color: #fff;
+        transform: translateY(-2px) scale(0.995);
+      }
+
+       
+      /* PRODUCTS */
+      .products {
+        /* background:#f5f5f5; */
+        color: #fff;
+        padding: 50px;
+      }
+
+      .products h2 {
+        margin-bottom: 20px;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .product {
+        background: #fff;
+        border-radius: 15px;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .product h3{
+        color: #000;
+      }
+
+      .product img {
+        width: 100%;
+        height: 350px;
+      }
+
+      /* Hover effects for products */
+      .product {
+        transition:
+          transform 0.28s ease,
+          box-shadow 0.28s ease;
+      }
+
+      .product img {
+        transition: transform 0.28s ease;
+      }
+
+      .product:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+      }
+
+      .product:hover img {
+        transform: scale(1.035);
+      }
+
+      .add-btn {
+        transition:
+          background 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .product:hover .add-btn {
+        transform: translateY(-2px);
+      }
+
+      .price {
+        color: #ff6a00;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .add-btn {
+        background: #ff6a00;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .add-btn:hover {
+        background: #111827;
+        color: #fff;
+      }
+
+      /* OFFER */
+      .offer {
+        padding: 30px;
+        background: linear-gradient(90deg, #111827, #1f2937);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .offer input {
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        width: 200px;
+      }
+
+      .offer button {
+        padding: 10px 20px;
+        border: none;
+        background: #ff6a00;
+        color: #fff;
+        border-radius: 10px;
+        margin-left: 10px;
+      }
+
+      /*Footer*/
+      .footer {
+        background: linear-gradient(135deg, #0b0f19, #1a2238);
+        color: white;
+        padding: 40px 0;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      .footer h2 {
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .footer h3 {
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .footer p {
+        color: #fff;
+        margin-top: 5px;
+      }
+
+      .footer-links ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links ul li {
+        margin-bottom: 8px;
+      }
+
+      .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .footer-links ul li a:hover {
+        color: #ff6b00;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .social-icons a {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 8px;
+        text-decoration: none;
+        transition: 0.3s;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .social-icons a:hover {
+        color: #ff6b00;
+      }
+
+      .footer-col h4 {
+        color: var(--gold);
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      /* ================= RESPONSIVE ================= */
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          height: auto;
+          padding-bottom: 50px;
+    
+        }
+
+        .hero img {
+          width: 300px;
+          margin-top: 20px;
+          max-width: 300px;
+          display: block;
+        
+        }
+
+        .category-grid {
+          grid-template-columns: repeat(zzz3, 1fr);
+        }
+
+        .product-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .navbar {
+          padding: 20px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        .navbar {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .nav-links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero-text h1 {
+          font-size: 28px;
+        }
+
+        .hero {
+          padding: 30px 20px;
+        }
+
+        .category {
+          padding: 30px 20px;
+        }
+
+        .products {
+          padding: 30px 20px;
+        }
+
+        .category-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .product-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .offer {
+          flex-direction: column;
+          gap: 10px;
+          text-align: center;
+        }
+
+        .footer-container {
+          flex-direction: column;
+          text-align: center;
+          gap: 20px;
+        }
+      }
+    </style>
+
+  <body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <h2>Hamas Sneaker Collections</h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="brand.html">New Arrival</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>Hamas Nike <span>Collections</span></h1>
+        <p>Premium comfort, performance and street-ready designs.</p>
+        <a href="brand.html"
+          ><button class="btn btn-outline">View New Arrivals</button></a>
+        <a href="shop.html" class="btn btn-professional" id="profBtn"
+          >Shop Now</a>
+      </div>
+        <div class="home-img">
+        <img src="image/homebg.png" alt="home-img">
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="products">
+      <h2>Trending Now</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="./image/1.png" />
+          <h3>Nike Jordan4 Military Black</h3>
+          <p class="price">470000MMK</p>
+          <a href="order.html"><button class="add-btn">Add to Cart</button></a>
+        </div>
+
+        <div class="product">
+          <img src="./image/orange lobster.jpg" />
+          <h3>Nike Orange Lobster</h3>
+          <p class="price">2800000MMK</p>
+          <a href="order.html"><button class="add-btn">Add to Cart</button></a>
+        </div>
+
+        <div class="product">
+          <img src="./image/400.jpg" />
+          <h3>Nike Air Froce 1</h3>
+          <p class="price">470000MMK</p>
+          <a href="order.html"><button class="add-btn">Add to Cart</button></a>
+        </div>
+
+        <div class="product">
+          <img src="./image/13.jpg" />
+          <h3>Nike X Powerpuff Girls</h3>
+          <p class="price">1600000MMK</p>
+          <a href="order.html"><button class="add-btn">Add to Cart</button></a>
+        </div>
+      </div>
+    </div>
+    <!-- /*footer*/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2>Sneaker Shop</h2>
+          <p>Fresh sneakers. Premium comfort. Everyday style.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="brand.html">New Arrival</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Dawei, Myanmar</p>
+          <p><i class="fas fa-phone"></i> +95 9 123 456 789</p>
+          <p><i class="fas fa-envelope"></i> info@sneakershop.com</p>
+          <p><i class="fas fa-envelope"></i> www.sneakershop.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sneaker Shop| Designed by Okekar Min.</p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const profBtn = document.getElementById("profBtn");
+        if (!profBtn) return;
+        profBtn.addEventListener("click", function () {
+          profBtn.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

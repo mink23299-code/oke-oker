@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>new-arrival</title>
+    
+  </head>
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #1f2937;
+      color: #fff;
+    }
+
+    /* NAVBAR */
+   .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+      }
+
+      .navbar h2 {
+        font-weight: 600;
+      }
+
+      .nav-links a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #ccc;
+      }
+
+      .nav-links a:hover {
+        color: #ff6a00;
+      }
+
+    /* New Arrival */
+    .new-arrival {
+      /* background: #f1f2f6; */
+      padding: 60px 8%;
+      min-width: 300px;
+    }
+
+    .arrival-container {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .arrival-box {
+      align-items: center;
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .arrival-box img {
+      width: 200px;
+      height: auto;
+    }
+
+    .arrival-text {
+      padding: 40px;
+    }
+
+    .arrival-text h3 {
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .arrival-text p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .arrival-text button {
+      background: #ff6a00;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      width: 100%;
+    }
+    .arrival-text button a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .arrival-text button:hover {
+      background: #111827;
+    }
+
+    .section-title {
+      padding: 80px 60px;
+      text-align: center;
+      background: linear-gradient(135deg, #0b0f19, #1a2238);
+    }
+
+    .section-title h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    .section-title span {
+      color: #ff6a00;
+    }
+
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    /*Footer*/
+    .footer {
+      background: linear-gradient(135deg, #0b0f19, #1a2238);
+
+      color: white;
+      padding: 40px 0;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer h2 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .footer h3 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .footer p {
+      color: #fff;
+      margin-top: 5px;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-links ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-links ul li a:hover {
+      color: #ff6b00;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icons a:hover {
+      color: #ff6b00;
+    }
+
+    .footer-col h4 {
+      color: var(--gold);
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+
+  <body>
+    <!-- NAVBAR -->
+     <div class="navbar">
+      <h2>Hamas Sneaker Collections</h2>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="brand.html">New Arrival</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <section class="section-title">
+      <h2>New <span>Arrivals</span></h2>
+      <p>Limited Edition</p>
+    </section>
+    <section id="new-arrival" class="new-arrival">
+      <div class="arrival-container">
+        <div class="arrival-box">
+          <img src="./image/hmb.png" alt="New Arrival" />
+            
+          <div class="arrival-text">
+            <h3>Nike Air Max Plus Homecoming Black</h3>
+            <p>
+              Pre-order your favorite sneakers now and be the first to step into
+              the latest drops. Limited stock available — secure your pair
+              today.
+            </p>
+            <a href="pre-order.html"><button>Pre-order Now</button></a>
+          </div>
+        </div>
+
+        <div class="arrival-box">
+          <img src="./image/chinses new year.png" alt="New Arrival" />
+          <div class="arrival-text">
+            <h3>Nike X Chinese New Year </h3>
+
+            <p>
+              Pre-order your favorite sneakers now and be the first to step into
+              the latest drops. Limited stock available — secure your pair
+              today.
+            </p>
+            <a href="pre-order.html"><button>Pre-order Now</button></a>
+          </div>
+        </div>
+
+        <div class="arrival-box">
+          <img src="./image/Air Max.png" alt="New Arrival" />
+          <div class="arrival-text">
+            <h3>Nike Air Max</h3>
+
+            <p>
+              Pre-order your favorite sneakers now and be the first to step into
+              the latest drops. Limited stock available — secure your pair
+              today.
+            </p>
+            <a href="pre-order.html"><button>Pre-order Now</button></a>
+          </div>
+        </div>
+
+        <div class="arrival-box">
+          <img src="./image/mind001.png" alt="New Arrival" />
+          <div class="arrival-text">
+            <h3>Nike Mind 001</h3>
+
+            <p>
+              Pre-order your favorite sneakers now and be the first to step into
+              the latest drops. Limited stock available — secure your pair
+              today.
+            </p>
+            <a href="pre-order.html"><button>Pre-order Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /*footer*/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-logo">
+          <h2>Sneaker Shop</h2>
+          <p>Fresh sneakers. Premium comfort. Everyday style.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="brand.html">New Arrival</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Dawei, Myanmar</p>
+          <p><i class="fas fa-phone"></i> +95 9 123 456 789</p>
+          <p><i class="fas fa-envelope"></i> info@sneakershop.com</p>
+          <p><i class="fas fa-envelope"></i> www.sneakershop.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Sneaker Shop| Designed by Okekar Min.</p>
+      </div>
+    </footer>
+  </body>
+</html>
